@@ -19,5 +19,4 @@ angular.module('todos').service('Liste', ['$http', 'Tache',
         }
         return Liste;
     }
-    test
 ]);
