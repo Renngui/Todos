@@ -1,0 +1,5 @@
+client :
+ruby -run -ehttpd . -p8080
+
+server : 
+rackup
