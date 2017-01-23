@@ -2,23 +2,31 @@
 <html lang='fr'>
   <head>
     <meta charset="utf-8" />
-    <title>TODOS</title>
+    <title>TD Todos</title>
     <script src="lib/angular.min.js"></script>
     <script src="lib/jquery-3.1.1.min.js"></script>
     <script src="app/app.js"></script>
+    <script src="app/models/liste.js"></script>
+    <script src="app/models/tache.js"></script>
     <script src="app/controller/listes_controller.js"></script>
-    <script src="app/directives/listes_directive.js"></script>
+    <script src="app/controller/taches_controller.js"></script>
+    <script src="app/directives/liste_directive.js"></script>
+    <script src="app/directives/tache_directive.js"></script>
     <link href="lib/todos.css" rel='stylesheet' />
   </head>
 
   <body ng-app='todos'>
-    <h1>Projet TODOS</h1>
-    <div ng-controller='ListeController' id='listes'>
-      <ul>
-        <li ng-repeat='listes in liste'>
-          {{listes}}
+    <h1>TD TODOS</h1>
+    <div ng-controller='ListesController' id='listes'>
+      <input ng-model='add' name='ajouter' type="text"/><button name='ajouter' ng-click='ajouter()'>Ajouter Liste</button>
+      <ul class='listes'>
+        <li ng-repeat='liste in listes'>
+        <liste></liste>
         </li>
       </ul>
+    </div>
+    <div ng-controller='TacheController' id='tache'>
+      <tache></tache>
     </div>
   </body>
 </html>

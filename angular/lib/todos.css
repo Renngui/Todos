@@ -17,7 +17,7 @@ h1 { text-align: center; }
   padding: 0;
 }
 
-.listes {
+.liste {
   position: relative;
   padding: 10px;
   margin: 10px;
@@ -25,7 +25,11 @@ h1 { text-align: center; }
   border: 1px solid #4b4b89;
 }
 
-.name {
+.listes{
+  width: 50%;
+}
+
+.id {
   font-size: 26px;
   text-transform: uppercase;
   color: #4b4b89;
@@ -94,7 +98,7 @@ button:active {
   background: green;
 }
 
-.buy button {
+.afficher button {
   position: absolute;
   bottom: 10px;
   right: 10px;
