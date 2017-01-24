@@ -16,8 +16,8 @@ angular.module('todos').controller('ListesController', ['$scope', '$http', 'List
                     console.log(error);
                 });
 
-        $scope.ajouter=function(){
-          Liste.ajouter($scope.add);
+        $scope.ajouter = function() {
+            Liste.ajouter($scope.add);
         }
     }
 ]);

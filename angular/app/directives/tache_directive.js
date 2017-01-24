@@ -1,7 +1,6 @@
-angular.module('todos').directive('tache',
-  [function(){
+angular.module('todos').directive('tache', [function() {
     return {
-      restrict: 'E',
-      templateUrl: 'app/templates/tache.html',
+        restrict: 'E',
+        templateUrl: 'app/templates/tache.html',
     };
-  }])
+}])
