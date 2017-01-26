@@ -17,16 +17,24 @@
 
   <body ng-app='todos'>
     <h1>TD TODOS</h1>
-    <div ng-controller='ListesController' id='listes'>
-      <input ng-model='add' name='ajouter' type="text"/><button name='ajouter' ng-click='ajouter()'>Ajouter Liste</button>
-      <ul class='listes'>
-        <li ng-repeat='liste in listes'>
-        <liste></liste>
-        </li>
-      </ul>
-    </div>
-    <div ng-controller='TacheController' id='tache'>
-      <tache></tache>
+    <div id="flex">
+      <div ng-controller='ListesController' id='listes'>
+        <h2>Liste</h2>
+        <input ng-model='add' name='ajouter' type="text"/><button name='ajouter' ng-click='ajouter()'>Ajouter Liste</button>
+        <ul class='listes'>
+          <li ng-repeat='liste in listes'>
+          <liste></liste>
+          </li>
+        </ul>
+      </div>
+      <div ng-controller='TacheController' id='taches'>
+        <h2>Tache</h2>
+        <ul>
+          <li ng-repeat='tache in taches'>
+            {{tache}}
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
