@@ -20,12 +20,12 @@ h1 { text-align: center; }
   padding: 5px;
 }
 
-.listes, .liste {
+.listes, .liste, .taches, .tache {
   list-style-type: none;
   padding: 0;
 }
 
-.liste {
+.liste, .tache {
   position: relative;
   padding: 10px;
   margin: 10px;

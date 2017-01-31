@@ -21,9 +21,6 @@ angular.module('todos').controller('TacheController', ['$scope', '$http', 'Tache
                         });
             }
         });
-
-
-
         $scope.ajouter = function() {
             Tache.ajouter($scope.add);
         }

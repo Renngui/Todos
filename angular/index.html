@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang='fr'>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>TD Todos</title>
     <script src="lib/angular.min.js"></script>
@@ -13,28 +14,30 @@
     <script src="app/directives/liste_directive.js"></script>
     <script src="app/directives/tache_directive.js"></script>
     <link href="lib/todos.css" rel='stylesheet' />
-  </head>
+</head>
 
-  <body ng-app='todos'>
+<body ng-app='todos'>
     <h1>TD TODOS</h1>
     <div id="flex">
-      <div ng-controller='ListesController' id='listes'>
-        <h2>Liste</h2>
-        <input ng-model='add' name='ajouter' type="text"/><button name='ajouter' ng-click='ajouter()'>Ajouter Liste</button>
-        <ul class='listes'>
-          <li ng-repeat='liste in listes'>
-          <liste></liste>
-          </li>
-        </ul>
-      </div>
-      <div ng-controller='TacheController' id='taches'>
-        <h2>Tache</h2>
-        <ul>
-          <li ng-repeat='tache in taches'>
-            {{tache}}
-          </li>
-        </ul>
-      </div>
+        <div ng-controller='ListesController' id='listes'>
+            <h2>Liste</h2>
+            <input ng-model='add' name='ajouter' type="text" /><button name='ajouter' ng-click='ajouter()'>Ajouter Liste</button>
+            <ul class='listes'>
+                <li ng-repeat='liste in listes'>
+                    <liste></liste>
+                </li>
+            </ul>
+        </div>
+        <div ng-controller='TacheController' id='taches'>
+            <h2>Tache</h2>
+            <input ng-model='add' name='ajouter' type="text" /><button name='ajouter' ng-click='ajouter()'>Ajouter une Tache</button>
+            <ul class='taches'>
+                <li ng-repeat='tache in taches'>
+                    <tache></tache>
+                </li>
+            </ul>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
