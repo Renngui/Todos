@@ -12,7 +12,7 @@ angular.module('todos').controller('TacheController', ['$scope', '$http', 'Tache
                             console.log(response);
                             console.log(response.data);
                             response.data.forEach(function(data) {
-                                //var newTache = new Tache(data);
+                                var newTache = new Tache(data);
                                 $scope.taches.push(data);
                             });
                         },

@@ -1,5 +1,5 @@
 angular.module('todos').service('Tache', ['$http',
-    function($http, Tache) {
+    function($http) {
         var tache = function(data) {
             this.id = data.id;
             this.text = data.text;
@@ -8,7 +8,7 @@ angular.module('todos').service('Tache', ['$http',
         tache.afficher = function(data) {
             tache.currentListe = data;
         };
-        tache.prototype.supprimer = function() {
+        tache.supprimer = function() {
             $http.delete('http://todos.api.netlor.fr/lists/' + tache.currentListe.id + '/todos' + this.id);
         }
         tache.ajouter = function(name) {
