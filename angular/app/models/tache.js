@@ -7,14 +7,25 @@ angular.module('todos').service('Tache', ['$http',
 
         tache.afficher = function(data) {
             tache.currentListe = data;
-        };
-        tache.supprimer = function() {
-            $http.delete('http://todos.api.netlor.fr/lists/' + tache.currentListe.id + '/todos' + this.id);
         }
         tache.ajouter = function(name) {
             $http.post('http://todos.api.netlor.fr/lists/' + tache.currentListe.id + '/todos', {
                 "text": name
             });
+        }
+        tache.prototype.rename = function() {
+            $http.put('http://todos.api.netlor.fr/lists/' + tache.currentListe.id + '/todos' + this.id, {
+                "text": this.renommer
+            });
+        }
+        tache.prototype.terminer = function() {
+            $http.put('http://todos.api.netlor.fr/lists/' + tache.currentListe.id + '/todos' + this.id + '/done');
+        }
+        tache.prototype.nonterminer = function() {
+            $http.put('http://todos.api.netlor.fr/lists/' + tache.currentListe.id + '/todos' + this.id + '/undone');
+        }
+        tache.supprimer = function() {
+            $http.delete('http://todos.api.netlor.fr/lists/' + tache.currentListe.id + '/todos' + this.id);
         }
         return tache;
     }

@@ -12,6 +12,9 @@ angular.module('todos').directive('liste', [function() {
             scope.rename = function() {
                 scope.liste.rename();
             }
+            scope.ajouter = function() {
+                scope.liste.ajouter();
+            }
         }
     };
 }])

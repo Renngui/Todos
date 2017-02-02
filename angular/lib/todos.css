@@ -106,3 +106,11 @@ button:active {
   float: right;
   margin-right: 10px;
 }
+
+#true{
+  background-color: LimeGreen;
+}
+
+#false{
+  background-color: IndianRed;
+}

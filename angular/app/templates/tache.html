@@ -1,4 +1,7 @@
-<ul class='tache'>
+<ul class='tache' id={{tache.done}}>
   <li class='text'>{{tache.text}}</li>
   <li class='supprimer'><button ng-click='supprimer()'>Supprimer</button></li>
+  <li class='terminer'><button ng-click='terminer()'>Terminer la tache</button></li>
+  <li class='nonterminer'><button ng-click='nonterminer()'>Tache non terminée</button></li>
+  <li class='rename'><input ng-model='tache.renommer' name='renommer' type="text"/><button name='renommer' ng-click='rename()'>Rename</button></li>
 </ul>
