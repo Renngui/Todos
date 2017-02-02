@@ -3,9 +3,8 @@ angular.module('todos').directive('tache', [function() {
         restrict: 'E',
         templateUrl: 'app/templates/tache.html',
         link: function(scope, element, attrs) {
-
             scope.supprimer = function() {
-                scope.Tache.supprimer();
+                scope.tache.supprimer();
             }
             scope.rename = function() {
                 scope.tache.rename();

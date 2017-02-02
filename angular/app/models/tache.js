@@ -4,7 +4,6 @@ angular.module('todos').service('Tache', ['$http',
             this.id = data.id;
             this.text = data.text;
         }
-
         tache.afficher = function(data) {
             tache.currentListe = data;
         }
